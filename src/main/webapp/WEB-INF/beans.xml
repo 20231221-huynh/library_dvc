@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Su hien dien cua file nay bien webapp thanh mot "CDI bean archive", kich hoat CDI container (Weld)
+  quet va quan ly cac bean trong ung dung, dong thoi cho phep CDI thuc hien injection vao cac
+  Servlet/Filter/Listener theo dac ta tich hop CDI - Servlet Container.
+
+  bean-discovery-mode="annotated" (mac dinh khi khai bao <beans> khong ghi ro thuoc tinh nay o CDI 4.0):
+  chi cac class co "bean-defining annotation" (vi du @ApplicationScoped, @RequestScoped, @SessionScoped...)
+  moi duoc CDI tu dong nhan dien la bean va quan ly. Cac DAO trong du an duoc danh dau @ApplicationScoped
+  (xem package com.dvc.library.dao) nen se duoc CDI quet thay.
+-->
+<beans xmlns="https://jakarta.ee/xml/ns/jakartaee"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee
+       https://jakarta.ee/xml/ns/jakartaee/beans_4_0.xsd"
+       version="4.0"
+       bean-discovery-mode="annotated">
+</beans>
